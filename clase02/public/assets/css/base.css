@@ -1,0 +1,14 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+h1 {
+    color: blueviolet;
+}
+
+header {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}

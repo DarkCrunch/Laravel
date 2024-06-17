@@ -1,0 +1,11 @@
+Para establecer la relacion uno a uno se usa hasOne
+
+Para establecer la relacion uno a muchos o viceversa se usa hasMany
+
+Para establecer la relacion de muchos a muchos es necesario crear una migracion extra sin modelo ya que solo nos servira de conector entre ambas tablas. Ejemplo si tenemos rol y usuario se ordenan alfabeticamente y seria rol_usuario y en ambas clases se usan el belongstoMany
+
+Para establecer un relacion de paso (one to one) se necesita de almenos de tres tablas donde se busca que la conexion de la primera tabla no tenga conexion alguna con la tercera. sin embargo para poder realizar las consultas de paso sera necesario usar como intermediaria a la tabla en comun que tienen ambas tablas. Ejemplo (Usuario, Rol y Chip) el usuario mantiene relacion con rol mas no con chip y viceversa. se usa el hasOneTrough([clase destino],[clase intermediaria]) ejemplo (chip, rol)
+
+Para establecer un relacion de paso (one to many) se necesita de almenos de tres tablas donde se busca que la conexion de la primera tabla no tenga conexion alguna con la tercera. sin embargo para poder realizar las consultas de paso sera necesario usar como intermediaria a la tabla en comun que tienen ambas tablas. Ejemplo (Usuario, Rol y Chip) el usuario mantiene relacion con file mas no con category y viceversa. se usa el hasManyTrough([clase destino],[clase intermediaria]) ejemplo (category, file)
+
+Para establecer las relaciones polimorficas, debemos tener en cuenta que deben haber almenos tres tablas en donde la tabla de intermedio no sabe apriori que clave foranea de las otras dos tablas tendra, en este caso pongamos el ejemplo de la tabla post, imagen y usuario; en este caso no se sabe si un post subira la imagen o el usuario entonces se aniade dos campos mas adicionales a la tabla imagen (solo para enfatizar usa la siguiente nomenclatura para la creacion de los dos campos [nombre_tabla]able_id) y [nombre_tabla]able_type: en este caso seria imageable_id y imageable_type. Esto busca guardar el registro de la llave que realizo dicha accion en la tabla de imagenes. Es aplicable en morphMany, morphOne y MorphToMany

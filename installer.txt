@@ -1,0 +1,2 @@
+Tienes que descomentar ;extension=zip en php.init
+debe de quedar asi: extension=zip. guardas y listo

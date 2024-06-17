@@ -1,0 +1,6 @@
+si no encuentras la carpeta lang, ejecuta el siguiente comando
+php artisan lang:publish
+para listar todas las rutas existentes en el proyecto (route:list)
+php artisan r:l
+para crear un controlador con su crud y rutas autogeneradas se usa
+php artisan make:controller [nombredelcontrolador]Controller --resource

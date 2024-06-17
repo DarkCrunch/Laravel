@@ -1,0 +1,5 @@
+Un middleware controla los accesos de una o conjunto de vistas tanto de apps web y apis. Para crear un middleware se usa la siguiente sintaxis:
+php artisan make:middleware [NombreMiddleware]
+Todos los middleware que vayamos anadiendo se iran ubicando dentro de la carpeta app/middleware
+En laravel 11 ya no es requerido registrar el middleware en el kernel, por tanto tenemos que dirigirnos a la carpeta bootstrap, dentro de ella encontraremos el archivo app.php ahora, dentro de la seccion (withMiddleware(function (Middleware $middleware)) agregaremos nuestro middleware.
+Es necesario saber que middleware puede proteger un y/o un conjunto de request http por vista por grupos

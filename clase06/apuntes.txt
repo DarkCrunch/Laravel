@@ -1,0 +1,10 @@
+Para tener habilitado el api.php dentro de routes es necesario crearlo y luego dirigirnos a la carpeta bootstrap seleccionar el archivo app.php y luego insertar
+api: __DIR__.'/../routes/api.php',
+
+Ten en cuenta que para mantener un codigo limpio y con buenas practicas es brindar un workspace adecuado para cada funcion del codigo en laravel
+*Request: sirven para tener el codigo de validacion del controlador
+*Resource: sirven para controlar los datos de respuesta por consulta, ya sean con blade o a traves de api.
+*Controller: siven para manejar los http request segun el tipo de operacion crud a realizar tanto para blade o apis.
+*Model: Hasta ahora se usa para validar que campos son llenables, ocultos o protegidos de cambios
+*Migration: hasta ahora se usan para establecer los campos que contendra la tabla que sera ejecuada en Eloquent (ORM de Laravel) o conocido tambien como el sistema de persistencia
+

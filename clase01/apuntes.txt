@@ -1,0 +1,2 @@
+En esta clase solo se hace referencia a los diferentes enrutamientos que existen en laravel>
+routes>web.php

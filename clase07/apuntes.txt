@@ -1,0 +1,7 @@
+Para comenzar a llenar los seeder es necesario ir a databaseSeeder para declarar el seeder que vamos a usar:
+php artisan make:seeder [Tabla]seeder
+una vez que hayamos declarado todos los datos procedemos a insertar
+php artisan db:seed
+eso nos ayudara a poblar la bd
+Sin embargo si deseamos poblar alguna tabla en especifico y no toda se usa
+php artisan db:seed --class= [Tabla]Seeder
